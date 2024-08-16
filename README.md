@@ -1,5 +1,7 @@
 # Marketing Data Science Assignments in R
 
+![](data-science-in-marketing-post.jpg)
+
 ### Introduction
 
 This project is a compilation of assignments from Marketing 2120: Data Analytics for Marketing Decisions. These projects were completed in groups of four using pre-selected datasets across various topics testing various techniques. I've reorganized each assignment contains its own data, an annotated R notebook, and a write-up of the answers in a PDF. Here's a brief description of the individual assignments.
@@ -23,9 +25,6 @@ This project is a compilation of assignments from Marketing 2120: Data Analytics
     - In assignment 4 we used our logistic regression from the telecommunications company in assignment 2 to compute CLV. For a customer with a 20 month tenure, phone service, fiber optic internet, a one year contract, $60 monthly charges, and paperless billing the model predicts a CLV of $160.21 while the for the same customer without paperless billing the model predicts a CLV of $252.43. Meanwhile, for a customer with fiber optic internet revice, no phone service, a month-to-month contract, no paperless billing, $50 in monthly charges and 1 month of tenure the model predicts a CLV of $19.63. We also determine that the ignoring the tenure variable would lead us to overestimate churn risk.
     - Next, we use Annalect data, a leading global advertising and marketing communications services company, to understand the effectiveness of the various different campaigns they launched on behald of a company and in improving their attribution model. We began by computing the conversion rate for each channel using a last-click attribution model, and found that paid social had the highest conversion rate (36.8%), followed by Direct (24.4%), Paid SEO (21.3%), and Organic Search (14.4%), meanwhile email display ads and organic social ads had tiny or nonexistant conversion rates. Using a 2 sample chi-squared test we were able to determine a sitistically significant difference in conversion rate between paid seach and organic search campaigns. From this analysis we were able to conclude that paid search is more expensive it converts at a higher rate. Further testing and analysis would be required to determine whether the channel is worth the investment.
     - Finally, we used the same annalect data measuing engagement with various channels as binary variables to build a multitouch atribution model. First, we used a logistic regression to explain conversion as a function of campaign types. Display, Email, and Organic Search actually decreased the log odds of conversion whlie Direct, Paid Search, and Paid Social increased the log odds of conversion and Organic Social wasn't significant. Then, we re-ran the logistic regression using data only for people who already converted once before and found that Organic Search diminishes the log-odds of a conversion which we suspect is due to a crowd-out effect diminishing. Paid Social also becomes statistically insignificant while Direct and Paid Search have an even larger effect than before, and Display and Email remain negative. Since different channels have different effects on conversion probability depending on whether the customer has converted in the past, we split the attribution accordingly. The model could also be improved by accounting for other factors such as demographics, time of day, and purchasing history. 
-
-- Finish assignment 2 questions + summary
-- Switch out assignment 2 question 3 questions
 
 ### Data
 
