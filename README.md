@@ -1,11 +1,48 @@
 # Marketing Data Science Assignments in R
 
+### Introduction
+
 This project is a compilation of assignments from Marketing 2120: Data Analytics for Marketing Decisions. These projects were completed in groups of four using pre-selected datasets across various topics testing various techniques. I've reorganized each assignment contains its own data, an annotated R notebook, and a write-up of the answers in a PDF. Here's a brief description of the individual assignments.
 
+### Directory
 
-1. Hypothesis Testing, Net Promoter Score, Visualization
-2. Multiple Regression, Logistic Regression, Predicting Churn
-3. Designing and Analyzing Ratings Based Conjoint, Factor Analysis
-4. Computing CLV, Attribution Modelling, Conversion Probability
+1. Assignment 1: 
+    - In assignment one we used Hertz data, a world leader in retail rental cars and equipment, to understand which variables were predictive of customer satisfaction for their service. We ran a chi-square test on the net promoter scores of customers whose purpose of travel was business versus personal and found a significant relationship between the purpose of rental and the net promoter sscore. We then ran another chi-square test and determined that the proportion of promoters among business travelers is lower than the proportion among personal travelers. Building on that insight, we ran a t-test and determined busines travelers, on average, spend less than personal travelers. Hertz could theoretically use these insights to tailor pricing strategies or promotions to better suit the spending behavior of business and personal travelers. 
+    - Next, we analyzed data from a big fast-food brand to assess a potential change in the look of its stores. Specifically, a large survey of existing customer and their reacrions to the new concept. We began by running a chi-square test to see whether the order of the questions was effecting the results of a question related to openness to new look stores, and found that there was a significant effect. We hypothesized that this was due to a question about the frequency of going to stores. We tested this hypothesis using a chi-square test and found that our intuition was correct. The company should adjust its survey so that the question about frequency of store visits comes after the question about openess to a new look.
 
-Data: The datasets used in these projects were provided by Wharton Customer Analytics, in conjunction with partner companies. These are real data sets provided for educational purposes. I am not able to put the datasets used in these assignments into this repository as that would be a breach of the Data User Agreement I've signed.
+2. Assignment 2: 
+    - In assignment two we revisited the Hertz data from assignment one. We wanted to deremine which variables are predictive of a customer reccomending Hertz. We ran a multiple regession on all the variables and determined the order of importance based on the coefficients. We determined that value for money is the most important variable for customer satisfaction and staff courtesy amd vehicle condition are crucial components too. We then checked our analysis for multicollinearity using a correlation matrix between each independent variable. We found that each variable contributes meaningfully and non-collinearly to the variability. Using a regression for this analysis allowed us to determine how variables are interrelated and order them based on magnitude of importance. Hertz could use these insights to focus business development on the most influential areas for customer satisfaction.
+    - Next, we analyzed data from a major international video game company interested in understanding player engagement within their games, and in particular, how different in-game features, and the different platforms players can use to play their games, affect how much time people spend playing. We started by plotting a histogram to compare the distribution between single and multiplayer game types. We then analyzed the difference between these two groups running a regression using duration as as the dependent variable and game type as the independent variable. 
+    - Finally, we analyzed data from a leading telecommunications company and ran logistic regressions to predict churn rates of their internet service. We began by analyzing demographic variables and calculated a 35% churn probability for male senior citizens with a partner and no dependent, and a 31% churn probability for younger females with no partners and no dependents. We then analyzed behavioral variables and determined the customers with the highest risk of churn had a short tenure, fiber optic service, a month to month contract, monthly charges, paperless billing, and no phone service. From this we were able to calculate that a customer with a 20 month tenure, phone service, fiber optic internet, a one year contract, $60 monthly charges, and paperless billing has a 26% probability of churning while the same customer without paperless billing has a 18% probability of churning. Based on the AIC statictic of the model the behavioral variables appear to better explain customer churn than the demographic model, which lines up with our intuitions.The company could use these insights to focus on enhancing the fiber-optic experience, promote longet-term contracts, re-evaluate the paperless billing offer, address high churn among new customers, and adjust monthly charges strategically. 
+
+3. Assignment 3: 
+    - For assignment 3 we developed and ratings based conjoint analysis survey to determine which attributes of beer members of my fraternity valued the most. We selected the attributes price, taste, abv, packaging, and eco-friendliness and had respondents rate beer profiles on a likert scale (1-7). We ran multiple regressions on each person and calculated willingness to pay. From this we were able to predict which was the best possible product for each respondent and calculate market shares of various products with different attributes. We found that some people might associate cheapness with low quality, while others might have a more expensive taste in quality beer. It was difficult to understand general trends from such a small number of respondents.
+    - Next, we used survey data from a large automotive manufacturer to better understand why customers may or may not be interested in more technology in their cars. We used cluster analysis to identify five groups amongst the survey respondents which we labeled tech-savvy performers, modern-tech afficianados, fashionable trendsetters, premium style innovators, and independent outsiders. We then used principal component analysis to identify three factors that influenced survey response and rated the clusters on those factors.
+
+4. Assignment 4: 
+    - In assignment 4 we used our logistic regression from the telecommunications company in assignment 2 to compute CLV. For a customer with a 20 month tenure, phone service, fiber optic internet, a one year contract, $60 monthly charges, and paperless billing the model predicts a CLV of $160.21 while the for the same customer without paperless billing the model predicts a CLV of $252.43. Meanwhile, for a customer with fiber optic internet revice, no phone service, a month-to-month contract, no paperless billing, $50 in monthly charges and 1 month of tenure the model predicts a CLV of $19.63. We also determine that the ignoring the tenure variable would lead us to overestimate churn risk.
+    - Next, we use Annalect data, a leading global advertising and marketing communications services company, to understand the effectiveness of the various different campaigns they launched on behald of a company and in improving their attribution model. We began by computing the conversion rate for each channel using a last-click attribution model, and found that paid social had the highest conversion rate (36.8%), followed by Direct (24.4%), Paid SEO (21.3%), and Organic Search (14.4%), meanwhile email display ads and organic social ads had tiny or nonexistant conversion rates. Using a 2 sample chi-squared test we were able to determine a sitistically significant difference in conversion rate between paid seach and organic search campaigns. From this analysis we were able to conclude that paid search is more expensive it converts at a higher rate. Further testing and analysis would be required to determine whether the channel is worth the investment.
+    - Finally, we used the same annalect data measuing engagement with various channels as binary variables to build a multitouch atribution model. First, we used a logistic regression to explain conversion as a function of campaign types. Display, Email, and Organic Search actually decreased the log odds of conversion whlie Direct, Paid Search, and Paid Social increased the log odds of conversion and Organic Social wasn't significant. Then, we re-ran the logistic regression using data only for people who already converted once before and found that Organic Search diminishes the log-odds of a conversion which we suspect is due to a crowd-out effect diminishing. Paid Social also becomes statistically insignificant while Direct and Paid Search have an even larger effect than before, and Display and Email remain negative. Since different channels have different effects on conversion probability depending on whether the customer has converted in the past, we split the attribution accordingly. The model could also be improved by accounting for other factors such as demographics, time of day, and purchasing history. 
+
+- Finish assignment 2 questions + summary
+- Switch out assignment 2 question 3 questions
+
+### Data
+
+The datasets used in these projects were provided by Wharton Customer Analytics, in conjunction with partner companies. These are real data sets provided for educational purposes. I am not able to put the datasets used in these assignments into this repository as that would be a breach of the Data User Agreement I've signed.
+
+### Tools + Skills
+
+- R (tidyverse)
+- Hypothesis Testing
+- Net Promoter Score Calculation
+- Linear Regression
+- Multiple Linear Regression
+- Logistic Regression
+- Conjoint Analysis
+- Random Forrest
+- XG Boost
+- CLV Modeling
+- Churn Modeling
+- Attribution Modeling
+- Conversion Modeling
