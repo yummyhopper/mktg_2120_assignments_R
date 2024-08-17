@@ -4,7 +4,7 @@
 
 ### Introduction
 
-This project is a compilation of assignments from Marketing 2120: Data Analytics for Marketing Decisions. These projects were completed in groups of four using pre-selected datasets across various topics testing various techniques. I've reorganized each assignment contains its own data, an annotated R notebook, and a write-up of the answers in a PDF. Here's a brief description of the individual assignments.
+This project is a compilation of assignments from Marketing 2120: Data Analytics for Marketing Decisions. Each assignment involves real-world data and focuses on applying various data science techniques in R to solve marketing-related problems. The assignments span a range of topics, including customer satisfaction, product preferences, churn prediction, and marketing attribution. By analyzing these datasets, we explore how businesses can use data to enhance customer experience, improve product offerings, and optimize marketing campaigns. This compilation reflects the practical application of data science tools and methodologies in the context of marketing, providing valuable insights and actionable recommendations for businesses.
 
 ### Directory
 
