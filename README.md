@@ -6,7 +6,7 @@
 
 This project is a compilation of assignments from Marketing 2120: Data Analytics for Marketing Decisions. Each assignment involves real-world data and focuses on applying various data science techniques in R to solve marketing-related problems. The assignments span a range of topics, including customer satisfaction, product preferences, churn prediction, and marketing attribution. By analyzing these datasets, we explore how businesses can use data to enhance customer experience, improve product offerings, and optimize marketing campaigns. This compilation reflects the practical application of data science tools and methodologies in the context of marketing, providing valuable insights and actionable recommendations for businesses.
 
-### Directory
+### Contents
 
 1. Assignment 1: 
     - In assignment one we used Hertz data, a world leader in retail rental cars and equipment, to understand which variables were predictive of customer satisfaction for their service. We ran a chi-square test on the net promoter scores of customers whose purpose of travel was business versus personal and found a significant relationship between the purpose of rental and the net promoter sscore. We then ran another chi-square test and determined that the proportion of promoters among business travelers is lower than the proportion among personal travelers. Building on that insight, we ran a t-test and determined busines travelers, on average, spend less than personal travelers. Hertz could theoretically use these insights to tailor pricing strategies or promotions to better suit the spending behavior of business and personal travelers. 
